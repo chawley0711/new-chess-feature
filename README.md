@@ -1,0 +1,1 @@
+new-chess-feature
