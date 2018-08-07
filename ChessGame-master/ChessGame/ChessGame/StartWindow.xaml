@@ -1,0 +1,13 @@
+﻿<Window x:Class="ChessGame.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChessGame"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="325.472" Width="334.107">
+    <Grid>
+        <Button x:Name="btnChess" Content="Chess" HorizontalAlignment="Left" Margin="96,90,0,0" VerticalAlignment="Top" Width="141" Height="55" FontSize="20" Click="btnChess_Click"/>
+        <Button x:Name="btn960" Content="Chess 960" HorizontalAlignment="Left" Margin="96,167,0,0" VerticalAlignment="Top" Width="141" Height="55" FontSize="20" Click="btn960_Click"/>
+    </Grid>
+</Window>

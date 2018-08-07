@@ -49,12 +49,14 @@ namespace ChessGame {
         /// Last pressed button
         /// </summary>
         private BoardButton lastPressed;
+        private string GameMode;
 
-        public MainWindow() {
+        public MainWindow(string gameMode) {
 
             InitializeComponent();
 
-            this.boardModel = new Board();
+            this.boardModel = new Board(gameMode);
+            GameMode = gameMode;
             Debug.WriteLine(this.boardModel.ToString()); //REMOVE WHEN DONE
 
             this.mode = 0;//default start by chosing a piece
@@ -258,7 +260,7 @@ namespace ChessGame {
                 MessageBoxImage.Question);
 
             if (choice == MessageBoxResult.Yes) {
-                this.boardModel.Reset();
+                this.boardModel.Reset(GameMode);
                 this.turn = 0;//REMOVE if change turn from MainWindow to Board.
                 this.UpdateView();
                 Debug.WriteLine(this.boardModel.ToString());//REMOVE
